@@ -1,6 +1,6 @@
 # Brief Introduce:
 
-首先将群里的文件夹解压到桌面！
+首先将文件夹解压到桌面！
 
 1、打开Pycharm，打开Road_Block_Recognition文件夹，将当前的编译环境改成Python3.x（pytorch），然后在Terminal中运行如下命令：
 
@@ -57,4 +57,4 @@ Ps：关于traincascade的参数的选择(不同的参数应该会影响最终�
 > **h** 训练的正样本的高
 
 
-
+更详细的使用说明自行进入OpencvTrain.py以及main.py文件查看
