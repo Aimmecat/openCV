@@ -15,9 +15,9 @@ conda install --channel https://conda.anaconda.org/menpo opencv
 https://blog.csdn.net/maizousidemao/article/details/81474834?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163479705916780261970635%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=163479705916780261970635&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-2-81474834.first_rank_v2_pc_rank_v29&utm_term=python+opencv%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F&spm=1018.2226.3001.4187
 ```
 
-3、Opencv安装完毕之后，打开群里发的文件夹，可以先看一下每个文件夹里都是什么内容，由于训练需要，文件夹中不止有桶锥的图片，还有negative文件夹中不包含待识别物品的图片。
+3、Opencv安装完毕之后，可以先看一下每个文件夹里都是什么内容，由于训练需要，文件夹中不止有桶锥的图片，还有negative文件夹中不包含待识别物品的图片。
 
-4、treinamento是opencv生成的文件夹，所以每次重新训练的时候，都要把它清掉（虽然我也没试过不删除会有什么影响）。同理，如果在使用cmd命令生成info.txt，negative txt，vector.vec文件时报错的话，最好也删掉重新生成。
+4、model是opencv生成的文件夹，所以每次重新训练的时候，都要把它清掉（虽然我也没试过不删除会有什么影响）。同理，如果在使用cmd命令生成info.txt，negative txt，vector.vec文件时报错的话，最好也删掉重新生成。
 
 5、然后就可以开始生成文件啦！
 
@@ -56,26 +56,5 @@ Ps：关于traincascade的参数的选择(不同的参数应该会影响最终�
 > **w** 训练的正样本的宽度
 > **h** 训练的正样本的高
 
-6、训练完成之后，点击analiseTreinamento.py，程序第四行：
-
-```
-img = cv2.imread("Test/Test-img(8).jpg")
-```
-
-可以对img(8)中的数字进行更改，然后运行，即可看到最终的结果。
 
 
-
-以下是每个py文件的作用：
-
-analiseTreinamento.py used to test one picture
-
-analiseTreinametoVideo.py used to use your camera to recognize timly
-
-buildListNegative.py used to create negative.txt, run it after you put the negative picture to file
-
-info.txt created by command, it will be touched in the later
-
-renameFiles.py used to rename the img you saved in "negative", "positive" and 'Test'
-
-vectire.vec created by command, it will be touched soon
